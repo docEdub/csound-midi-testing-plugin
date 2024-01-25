@@ -14,7 +14,7 @@ fetch_dependency(
 project(csound-midi-testing-plugin)
 
 add_csound_plugin(
-    TARGET websocket-io
+    TARGET midi-testing
     SOURCES
         "src/_init_.c"
         "src/common.c"
