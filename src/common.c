@@ -11,7 +11,7 @@ static int callback(CSOUND *csound, void *userData, unsigned char *buf, int nByt
     (void) userData;
 
     if (midiBufferIndex == 0) {
-        return OK;
+        return 0;
     }
 
     int byteCount = midiBufferIndex;
@@ -30,7 +30,7 @@ static int callback(CSOUND *csound, void *userData, unsigned char *buf, int nByt
         memmove(midiBuffer, midiBuffer + byteCount, midiBufferIndex);
     }
 
-    return OK;
+    return byteCount;
 }
 
 
